@@ -1,0 +1,59 @@
+<div class="container-fluid">
+    
+  <h4>Register Forms</h4>
+
+<form (ngSubmit)="onSubmit()" [formGroup]="regForm" class="needs-validation was-validated" novalidate>
+
+<div>
+   <label for="name" class="form-label">Name:</label>&nbsp;
+   <input type="text" name="name" id="name"  formControlName="name" placeholder="Enter Your Name" 
+   required autofocus
+   class="form-control"
+   />
+</div>
+
+<small *ngIf=" name.errors?.['required']" class="invalid-feedback">
+  Name is required
+</small>
+
+<div>
+<label for="email" class="form-label">Email:</label>&nbsp;
+<input type="email" name="email" id="email"  placeholder="Enter Your Email" formControlName="email"
+required 
+class="form-control">
+</div>
+
+<small *ngIf= "email.errors?.['required']" class="invalid-feedback">
+  Email is required
+</small><br><br>
+
+<small *ngIf= "email.errors?.['email']" class="invalid-feedback">
+  Email is not valid
+</small>
+
+<div>
+<label for="password" class="form-label">Password:</label>&nbsp;
+<input type="password" name="password" id="password"  placeholder="Enter Your Password" formControlName="password"
+required 
+class="form-control">
+</div>
+
+<small *ngIf= "password.errors?.['required']" class="invalid-feedback">
+  Password is required
+</small>
+
+<small *ngIf= "password.errors?.['minlength']" class="invalid-feedback">
+  Password is must have minimum 8 charecters
+</small>
+
+<small *ngIf= "password.errors?.['maxlength'] ">
+  Password is should not exceed minimum 12 charecters
+</small><br><br>
+
+<div>
+<button type="submit" [disabled]="regForm.invalid" class="btn btn-success">Submit</button>
+{{regForm.invalid}}-{{regForm.valid}}
+</div>
+</form>
+</div>
+
