@@ -1,5 +1,7 @@
+
+
 carousel-indicator{
-  height: 3rem;
+  height: 30rem;
 }
       div.gallery {
         margin: 5px;
@@ -8,8 +10,7 @@ carousel-indicator{
         height: 280px;
         color: #646D7E;
         font-size: 15px;
-        font-weight: bold;
-     
+        font-weight: bold; 
       }
       
 
@@ -28,4 +29,6 @@ carousel-indicator{
     }
       
 
+    
+      
     

@@ -8,13 +8,13 @@ import { RouterLink } from '@angular/router';
   templateUrl: './home.component.html',
   styles: `
   .carousel slide{
-     width:80%;
-     height:650px;
+     width:50%;
+     height:auto;
 
   }
   
   .carousel-inner {
-    height:550px;
+    height:auto;
   }
   
 
